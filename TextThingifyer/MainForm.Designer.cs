@@ -36,6 +36,12 @@
             this.XMLPretty = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.URLEncode = new System.Windows.Forms.Button();
+            this.URLDecode = new System.Windows.Forms.Button();
+            this.HTMLEncode = new System.Windows.Forms.Button();
+            this.HTMLDecode = new System.Windows.Forms.Button();
+            this.QuoteDecode = new System.Windows.Forms.Button();
+            this.QuoteEncode = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +50,7 @@
             // 
             this.InputText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InputText.Location = new System.Drawing.Point(3, 3);
+            this.InputText.MaxLength = 999999999;
             this.InputText.Multiline = true;
             this.InputText.Name = "InputText";
             this.InputText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -126,11 +133,77 @@
             this.flowLayoutPanel1.Controls.Add(this.Base64Encode);
             this.flowLayoutPanel1.Controls.Add(this.JSONPretty);
             this.flowLayoutPanel1.Controls.Add(this.XMLPretty);
+            this.flowLayoutPanel1.Controls.Add(this.URLDecode);
+            this.flowLayoutPanel1.Controls.Add(this.URLEncode);
+            this.flowLayoutPanel1.Controls.Add(this.HTMLDecode);
+            this.flowLayoutPanel1.Controls.Add(this.HTMLEncode);
+            this.flowLayoutPanel1.Controls.Add(this.QuoteDecode);
+            this.flowLayoutPanel1.Controls.Add(this.QuoteEncode);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(435, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(434, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(132, 116);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(133, 290);
             this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // URLEncode
+            // 
+            this.URLEncode.Location = new System.Drawing.Point(3, 148);
+            this.URLEncode.Name = "URLEncode";
+            this.URLEncode.Size = new System.Drawing.Size(127, 23);
+            this.URLEncode.TabIndex = 6;
+            this.URLEncode.Text = "URL Encode";
+            this.URLEncode.UseVisualStyleBackColor = true;
+            this.URLEncode.Click += new System.EventHandler(this.URLEncode_Click);
+            // 
+            // URLDecode
+            // 
+            this.URLDecode.Location = new System.Drawing.Point(3, 119);
+            this.URLDecode.Name = "URLDecode";
+            this.URLDecode.Size = new System.Drawing.Size(126, 23);
+            this.URLDecode.TabIndex = 7;
+            this.URLDecode.Text = "URL Decode";
+            this.URLDecode.UseVisualStyleBackColor = true;
+            this.URLDecode.Click += new System.EventHandler(this.URLDecode_Click);
+            // 
+            // HTMLEncode
+            // 
+            this.HTMLEncode.Location = new System.Drawing.Point(3, 206);
+            this.HTMLEncode.Name = "HTMLEncode";
+            this.HTMLEncode.Size = new System.Drawing.Size(126, 23);
+            this.HTMLEncode.TabIndex = 8;
+            this.HTMLEncode.Text = "HTML Encode";
+            this.HTMLEncode.UseVisualStyleBackColor = true;
+            this.HTMLEncode.Click += new System.EventHandler(this.HTMLEncode_Click);
+            // 
+            // HTMLDecode
+            // 
+            this.HTMLDecode.Location = new System.Drawing.Point(3, 177);
+            this.HTMLDecode.Name = "HTMLDecode";
+            this.HTMLDecode.Size = new System.Drawing.Size(126, 23);
+            this.HTMLDecode.TabIndex = 9;
+            this.HTMLDecode.Text = "HTML Decode";
+            this.HTMLDecode.UseVisualStyleBackColor = true;
+            this.HTMLDecode.Click += new System.EventHandler(this.HTMLDecode_Click);
+            // 
+            // QuoteDecode
+            // 
+            this.QuoteDecode.Location = new System.Drawing.Point(3, 235);
+            this.QuoteDecode.Name = "QuoteDecode";
+            this.QuoteDecode.Size = new System.Drawing.Size(126, 23);
+            this.QuoteDecode.TabIndex = 10;
+            this.QuoteDecode.Text = "Quote Decode";
+            this.QuoteDecode.UseVisualStyleBackColor = true;
+            this.QuoteDecode.Click += new System.EventHandler(this.QuoteDecode_Click);
+            // 
+            // QuoteEncode
+            // 
+            this.QuoteEncode.Location = new System.Drawing.Point(3, 264);
+            this.QuoteEncode.Name = "QuoteEncode";
+            this.QuoteEncode.Size = new System.Drawing.Size(126, 23);
+            this.QuoteEncode.TabIndex = 11;
+            this.QuoteEncode.Text = "Quote Encode";
+            this.QuoteEncode.UseVisualStyleBackColor = true;
+            this.QuoteEncode.Click += new System.EventHandler(this.QuoteEncode_Click);
             // 
             // MainForm
             // 
@@ -157,6 +230,12 @@
         private System.Windows.Forms.Button XMLPretty;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button URLDecode;
+        private System.Windows.Forms.Button URLEncode;
+        private System.Windows.Forms.Button HTMLDecode;
+        private System.Windows.Forms.Button HTMLEncode;
+        private System.Windows.Forms.Button QuoteDecode;
+        private System.Windows.Forms.Button QuoteEncode;
     }
 }
 

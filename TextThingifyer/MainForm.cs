@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Web;
 
 namespace TextThingifyer
 {
@@ -76,6 +77,64 @@ namespace TextThingifyer
             {
                 MessageBox.Show("Error XML PRETTY Printing. " + ex.ToString());
             }
+        }
+
+        private void URLDecode_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OutputText.Text = HttpUtility.UrlDecode(InputText.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error URL Decoding " + ex.ToString());
+            }
+        }
+
+        private void URLEncode_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OutputText.Text = HttpUtility.UrlEncode(InputText.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error URL Encoding " + ex.ToString());
+            }
+        }
+
+        private void HTMLDecode_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OutputText.Text = HttpUtility.HtmlDecode(InputText.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error HTML Encoding " + ex.ToString());
+            }
+        }
+
+        private void HTMLEncode_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OutputText.Text = HttpUtility.HtmlEncode(InputText.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error HTML Encoding " + ex.ToString());
+            }
+        }
+
+        private void QuoteDecode_Click(object sender, EventArgs e)
+        {
+            OutputText.Text = InputText.Text.Replace("\\\"", "\"").Replace("\\'", "'");
+        }
+
+        private void QuoteEncode_Click(object sender, EventArgs e)
+        {
+            OutputText.Text = InputText.Text.Replace("\"", "\\\"").Replace("'", "\\'");
         }
     }
 }
